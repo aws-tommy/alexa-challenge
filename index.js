@@ -31,7 +31,7 @@ const TripIntnetHandler = {
         // scores = {"Budapest"=0, "Mexico City"=0, "Hokkaido": 0, "Taipei": 0, "Heidelberg": 0, "Los Angeles":0 }
         let scores = {}
 
-          // Question 1: 如何可以讓所有的數字歸 0 ? 
+          // Question 1: 如何可以讓所有的數字歸 0 ? hint: loop
           /*Please filled in the code*/{
             var location = data.destinations[i];
             scores[location] = 0
@@ -69,12 +69,12 @@ const YesNoIntentHandler = {
         let scores = attrs.scores;                      //目前各地點的得分
 
 
-      // Question 2: 如何判斷客戶回答 Yes 的時候可以將相關的地點得分 +1 ?
+      // Question 2: 如何判斷客戶回答 Yes ? hint: 判斷條件
       /*Please filled in the code*/{
             // 找出對應回答的地點
             let destinationMatch = data.questionDestinationMatch[currentQuestionCount];
             console.log(destinationMatch);
-        // Question 3: 如何根據用戶的回答讓所有對應地點的累加得分 +1  ? 
+        // Question 3: 如何根據用戶的回答讓所有對應地點的累加得分 +1  ? hint: loop
         /*Please filled in the code*/{
                 var location = destinationMatch[i];
                 scores[location] = scores[location] + 1;
@@ -85,7 +85,7 @@ const YesNoIntentHandler = {
         attrs.questionCount = currentQuestionCount + 1;
         attrs.scores = scores;
 
-      // Question 4: 如何判斷問題是不是已經問完還是還有問題? 
+      // Question 4: 如何判斷問題是不是已經問完還是還有問題?  hint: 判斷條件
       /*Please filled in the code*/{
             //找出得分最高的地點
             var topDestination = '';
